@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.constraints.Pattern;
 import java.util.Map;
 
-@Validated
 @RestController
 @RequestMapping("api")
 @RequiredArgsConstructor
