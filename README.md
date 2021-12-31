@@ -24,6 +24,7 @@ To quickly test the API, you can access:
 - [dev](https://github.com/xrusu/ip-geolocation/tree/dev) This branch is used for development, without logs.
 - [dev-with-logs](https://github.com/xrusu/ip-geolocation/tree/dev-with-logs) This branch is used for development, with logs.
 
+
 ## Please note
 This API is based on [geoplugin.com](https://www.geoplugin.com/) and is just a wrapper with caching of their api. This is just an example of how to use their API in a Spring Boot project.
 
