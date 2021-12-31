@@ -3,6 +3,7 @@ package com.codingshadows.ipgeolocation.service;
 import com.codingshadows.ipgeolocation.data.GeoCacheData;
 import com.codingshadows.ipgeolocation.model.GeoCache;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.json.JSONObject;
 import org.springframework.stereotype.Service;
 
@@ -13,6 +14,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 @Service
+@Slf4j
 @RequiredArgsConstructor
 public class GeoDataService {
     public void removeExpiredGeoData() {
@@ -20,11 +22,15 @@ public class GeoDataService {
     }
 
     public Object getGeoData(String remoteIP) {
-        if (remoteIP == null)
+        if (remoteIP == null) {
+            log.warn("remoteIP was null");
             return null;
-        if (GeoCacheData.ipData.containsKey(remoteIP))
+        }
+        if (GeoCacheData.ipData.containsKey(remoteIP)) {
+            log.info("remoteIP was found in cache for remoteIP: " + remoteIP);
             return GeoCacheData.ipData.get(remoteIP).getGeoData();
-
+        }
+        log.info("remoteIP was not found in cache, requesting from remote");
         String url = "http://www.geoplugin.net/json.gp?ip=" + remoteIP;
         try {
             URL obj = new URL(url);
@@ -39,8 +45,10 @@ public class GeoDataService {
             in.close();
             JSONObject json = new JSONObject(locationResponse.toString());
             GeoCacheData.ipData.put(remoteIP, GeoCache.builder().geoData(json).saveTime(TimeService.getCurrentLocalDate()).ip(remoteIP).build());
+            log.info("found and parsed data for remoteIP: " + remoteIP);
             return json;
         } catch (IOException e) {
+            log.warn("request failed");
             e.printStackTrace();
             return null;
         }
