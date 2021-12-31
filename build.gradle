@@ -18,6 +18,7 @@ dependencies {
     implementation 'org.json:json:20211205'
     compileOnly 'org.projectlombok:lombok:1.18.22'
     annotationProcessor 'org.projectlombok:lombok:1.18.22'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools:2.6.2'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
