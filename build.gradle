@@ -15,6 +15,7 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springdoc:springdoc-openapi-ui:1.5.11'
+    implementation 'org.json:json:20211205'
     compileOnly 'org.projectlombok:lombok:1.18.22'
     annotationProcessor 'org.projectlombok:lombok:1.18.22'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'

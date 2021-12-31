@@ -1,7 +1,7 @@
 package com.codingshadows.ipgeolocation.service;
 
 import com.codingshadows.ipgeolocation.data.GeoCacheData;
-import com.codingshadows.romanabac.model.GeoCache;
+import com.codingshadows.ipgeolocation.model.GeoCache;
 import lombok.RequiredArgsConstructor;
 import org.json.JSONObject;
 import org.springframework.stereotype.Service;
