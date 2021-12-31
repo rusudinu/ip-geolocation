@@ -23,6 +23,7 @@ To quickly test the API, you can access:
 - [master](https://github.com/xrusu/ip-geolocation) This branch is the release branch, without logs.
 - [dev](https://github.com/xrusu/ip-geolocation/tree/dev) This branch is used for development, without logs.
 - [dev-with-logs](https://github.com/xrusu/ip-geolocation/tree/dev-with-logs) This branch is used for development, with logs.
+- [dev-with-ip-validation](https://github.com/xrusu/ip-geolocation/tree/dev-with-ip-validation) This branch is used for development, with IP validation.
 
 
 ## Please note
