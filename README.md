@@ -13,7 +13,7 @@ To build the project, go to the root folder of the project and:
 - go to build/libs
 - run `java -jar ipgeolocation-0.0.1-SNAPSHOT.jar`
 
-The API will be available at http://localhost:8080/api/get/<ip>, where `<ip>` is the IP address you want to geolocate.
+The API will then be available at http://localhost:8080/api/get/<ip>, where `<ip>` is the IP address you want to geolocate.
 
 To quickly test the API, you can access:
 [Swagger](http://localhost:8080/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config#/).
