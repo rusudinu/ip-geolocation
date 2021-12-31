@@ -1,4 +1,4 @@
-package com.codingshadows.ipgeolocation;
+package com.codingshadows.ipgeolocation.bootloader;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
